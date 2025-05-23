@@ -1,0 +1,11 @@
+@mixin phone375{
+    @media (max-width:375px) {
+        @content;
+    }
+}
+
+@mixin phone767{
+    @media (max-width:768px) {
+        @content;
+    }
+}

@@ -1,0 +1,26 @@
+*,*::before,*::after{
+    box-sizing:border-box;
+  }
+
+a{
+    text-decoration: none; 
+    display: block;
+    -webkit-tap-highlight-color: transparent; /*移除點擊高亮效果*/
+  }
+
+body{
+    font-family: "Noto Sans TC";
+    line-height: 1.5;
+    font-weight: 500;
+    background:rgba(251, 251, 251, 1);
+
+  
+}
+
+
+
+.container{
+    max-width:1296px;
+    margin: 0 auto;
+ 
+}

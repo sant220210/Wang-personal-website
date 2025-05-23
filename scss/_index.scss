@@ -1,0 +1,785 @@
+.main{
+    margin-top: 180px;
+
+     @include phone767(){
+        margin-top: 240px;
+     
+    }
+
+
+    
+    @include phone375(){
+        padding: 64px 12px;
+    }
+
+
+
+    .container{
+        padding: 80px 0;
+
+        h2{
+            @include title64;
+
+                @include phone767(){
+                    text-align: center;
+
+                }
+                @include phone375(){
+
+                    @include title48;
+                
+
+                    }
+            }
+        }
+}
+
+.mainbox{
+    margin: 32px 110px;
+
+        @include phone375(){
+                margin: 32px 0;
+                
+                }
+            }
+
+
+    li{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 64px;
+  
+
+        @include phone767(){
+        
+            flex-direction: column;
+            margin-bottom: 32px;
+           
+        }
+
+
+        img{
+            object-fit: cover;
+        }
+    }
+
+
+
+
+
+.textbox{
+    width: 480px;
+    background: #FFF;
+    padding: 64px 24px 24px 24px;
+    position: absolute;
+    right:2px;
+
+    @include phone767(){
+        width: 100%;
+        position: static;
+        
+        
+    }
+
+
+    h3{
+        @include title28;
+        margin-bottom: 4px;
+
+        &::before{
+        position: absolute; 
+        content: ""; 
+        width: 30px;
+        height: 2.5px;
+        background: $primary;
+        top:44px;
+
+        @include phone375(){
+            top:55%;
+        }
+     
+
+        }
+
+    }
+
+    p{
+        color:$gray ;
+    }
+}
+
+.textbox-left{
+   flex-direction: row-reverse;
+
+   @include phone767(){
+    flex-direction: column;
+   }
+
+
+   .textbox{
+    position: absolute;
+    left: 2px;
+    
+
+    @include phone767(){
+        width: 100%;
+        position: static;
+
+    }
+   }
+}
+
+
+
+.moreinfo{
+    @include title28;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -32px;
+    text-align: right;
+
+    @include phone767(){
+        margin-top: 0;
+    }
+
+    a{
+        color: #000;  
+
+        &:hover{
+           transition: all 0.6s;
+           color: $primary;
+          
+
+                }
+    }
+    
+}
+
+.bi-arrow-right-circle{
+  font-size: 40px;
+  margin-left: 8px;
+
+  @include phone375(){
+    margin:0 0 8px 0;
+  }
+
+
+}
+
+
+/*部落格精選*/
+.section{  
+    max-width: 1432px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $boder;
+    border-bottom: 1px solid $boder;
+
+   
+
+
+    .container{
+        padding:80px 0;
+       
+ 
+
+        
+        @include phone375(){
+            padding: 64px 12px;
+        }
+
+         h2{
+            @include title64;
+            margin-bottom: 24px;
+
+            @include phone375(){
+                @include title48;
+                
+            }
+        }
+
+    }
+
+}
+
+.blog-list{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:24px;
+
+    li{
+        display: flex;
+        flex-direction: column;
+        width:31.333%;
+        align-items: flex-start;
+        
+     
+       
+       
+
+        @include phone767(){
+         width: 100%;
+        }
+  
+    }
+
+    .featured{
+        @include phone767(){
+        display: none;
+        }
+    }
+    
+
+     h3{
+        @include title28;
+        margin-bottom:8px; 
+        }
+
+    img{
+        margin-bottom: 16px;
+        object-fit: cover;
+    }
+
+}
+
+.hashtag{
+    display: flex;
+   
+    
+}
+
+.tag{
+    color:$primary;
+    font-size: 24px;
+   
+    &:hover{
+        opacity: 0.5;
+    }
+}
+
+.date{
+  margin-bottom: 4px;
+
+}
+
+.label{
+   padding: 6px 12px;
+   background:$primary;
+   text-align: center;
+   border-radius:40px;
+   color: #fff;
+   margin-left: 8px;
+  
+    &:hover{
+      opacity: 0.5;
+
+       
+  }
+  
+  
+}
+
+.text-blog{
+    @include line-clamp(2);
+    color:$gray;
+
+    &-no1{
+        color: #000;
+        @include line-clamp(2);
+    }
+
+}
+
+
+
+.btn{
+  display: inline-block;
+  margin-top: 16px;
+  border: 1px solid #000;
+  text-align: center;
+  border-radius:40px;
+  padding: 8px 16px;
+  color:$gray;
+
+  &:hover{
+    background:$primary;
+    border: 1px solid $primary;
+    color: #fff;
+    transition: all 0.5s;
+    
+  }
+}
+
+.arrow-nav-phone{
+    width: 100%;
+    display: none;
+ 
+
+
+    @include phone375(){
+       display: block;
+       display: flex;
+       justify-content: end;
+       gap:24px;
+          
+    }
+
+}
+
+.arrow-nav375{
+    
+    display: block;
+    font-size: 44px;
+    color:$primary;
+    
+    &-l{
+        font-size: 44px;
+        color: rgba(178, 190, 242, 1);
+
+    }
+
+   
+
+}
+.arrow-nav{
+    font-size: 44px;
+    color:$primary;
+
+    @include phone375(){
+        display: none;
+    }
+
+
+    
+    .bi-arrow-left-circle-fill{
+        color: rgba(178, 190, 242, 1);
+    }
+
+    .bi-arrow-right-circle-fill{
+        &:hover{
+            color: rgba(178, 190, 242, 1);
+        }
+    }
+}
+
+
+
+
+
+/*職涯諮詢成功案例*/
+.case{
+    
+    .container{
+        padding: 80px 0;
+
+        @include phone375(){
+            padding: 64px 12px;
+        }
+        
+        h2{
+            @include title64;
+            margin-bottom: 24px;
+
+            @include phone375(){
+                @include title48;
+            }
+        }
+    }
+}
+
+.case-main{
+    display: flex;
+    position: relative;
+    margin-bottom: 40px;
+
+    @include phone767(){
+        flex-direction: column;
+    }
+
+}
+
+.case-block{
+    width: 50%;
+    background: rgba(237, 237, 237, 1);
+    padding: 24px;
+
+    @include phone767(){
+        width: 100%;
+        }
+
+
+    img{
+        object-fit: cover;
+        
+    
+    }
+}
+
+.case-text-title{
+    width: 745px;
+    background:#fff;
+    padding:144px 259px 40px 40px ;
+    font-weight: 700;
+    position: relative;
+    position: absolute;
+    left: 550px;
+    top: 15px;
+
+    @include phone767(){
+        position: static;
+        width: 100%;
+        padding: 104px 24px 40px 24px;
+    }
+
+    span{
+        color:$primary;
+    }
+    p{
+         &::before{
+        position: absolute; 
+        content: ""; 
+        width: 30px;
+        height: 2.5px;
+        background: $primary;
+        top:98px;
+
+        
+         @include phone767(){
+            top:360px;
+            }
+
+        }
+    }
+}
+
+.case-text-btn{
+    width: 526px;
+    background: rgba(245, 245, 245, 1);
+    padding:144px 40px 40px 40px ;
+    font-weight: 700;
+    position: relative;
+    position: absolute;
+    left: 765px;
+    top: 250px;
+
+    @include phone767(){
+        position: static;
+        width: 100%;
+        padding: 104px 24px 40px 24px;
+    }
+
+
+        p{
+         &::before{
+        position: absolute; 
+        content: ""; 
+        width: 30px;
+        height: 2.5px;
+        background: $primary;
+        top:90px;
+
+        @include phone767(){
+            top:620px;
+            }
+        }
+    }
+}
+
+.reserve-btn{
+    padding: 8px 16px;
+    text-align: center;
+    color: $primary;
+    border: 1px solid $primary;
+    background:#fff;
+    border-radius: 40px;
+    display: inline-block;
+    margin-top: 24px;
+
+    &:hover{
+        background: $primary;
+        color:#fff;
+        transition: all 0.6s;
+
+    }
+    
+
+}
+
+.case-list{
+    background: rgba(245, 245, 245, 1);
+    
+}
+
+.list-card{
+    padding: 24px;
+    display: flex;
+    gap: 24px; 
+
+    @include phone375(){
+        flex-direction: column;
+        }
+    
+
+    li{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        margin: 0;
+
+        h3{
+            @include title24;
+            margin-bottom: 8px;
+        }
+        p{
+            color:$gray;
+        }
+
+        img{
+            margin-bottom: 16px;
+        }
+        
+    }
+}
+
+.case-list-text{
+    width: 100%;
+ 
+    li{   
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        margin-bottom: 8px;
+      
+    }
+
+    &box{
+        border-bottom: 1px solid $gray;
+    }
+}
+
+.case-list-text-btn{
+    padding: 8px 16px;
+    color:$gray;
+    border: 1px solid $gray;
+    border-radius: 40px;
+    text-align: center;
+    margin-top: 16px;
+    display: inline-block;
+
+    &:hover{
+        color:#fff;
+        background: $primary;
+        transition: all 0.6s;
+    }
+}
+
+.bi-check-square-fill{
+    color: $primary;
+    display: block;
+}
+
+
+
+/*訂閱電子報*/
+.ubscriptions{
+    display: flex;
+
+    @include phone767(){
+            flex-direction: column;
+        }
+}
+.ubscriptions-bg{
+    width: 50%;
+    @include bgimg(834px,50%,'../img/photo9.png');
+
+    @include phone767(){
+            width: 100%;
+            @include bgimg(375px,50%,'../img/photo9.png');
+        }
+}
+
+.order{
+    width: 50%;
+    @include bgimg(834px,50%,'../img/Hero Section2.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include phone767(){
+            width: 100%;
+            padding: 12px;
+            @include bgimg(440px,50%,'../img/Hero Section2.png');
+        }
+}
+
+.order-text{
+    padding: 80px;
+    background: #FFF;
+    width: 800px;
+    margin-bottom: 16px;
+
+    @include phone375(){
+        padding:40px 24px;
+        width: 100%;
+        margin-bottom: 0;
+
+        }
+
+    h2{
+        @include title64;
+
+        @include phone375(){
+
+            @include title48;
+        
+        }
+
+    }
+
+    p{
+        font-size: 20px;  
+        margin-bottom: 24px;  
+
+    }
+
+    span{
+        color:$primary;
+    }
+}
+
+
+.info-name,.info-email{
+       width: 100%;
+        padding:8px 16px;
+        background: rgba(241, 241, 241, 1);
+        font-size: 20px;
+        color: $gray;
+        border: 0;
+
+}
+
+.info-name{
+    margin-bottom: 16px;
+}
+.order-btn{
+    background: #fff;
+    border: 1px solid $primary;
+    border-radius: 40px;
+    color: $primary;
+    padding: 8px 16px;
+    margin-top: 24px;
+    font-weight: 700;
+
+    &:hover{       
+        color:#fff;
+        background: $primary;
+        transition: all 0.6s;
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*與我聯繫*/ 
+.connect{
+    border-top: 1px solid $boder;
+    border-bottom: 1px solid $boder;
+
+    
+    .container{
+        padding: 80px 0;
+
+         @include phone375(){
+            padding: 64px 12px;
+         }
+        h2{
+            @include title64;
+            margin-bottom: 24px;
+
+            @include phone375(){
+                @include title48;
+
+            }
+        }
+    }
+
+    .connect-list{
+
+
+        li{
+            margin:0;
+            border-bottom: 1px solid #000;
+            display: flex;
+            
+
+      
+        }
+
+        a{  
+            color:#000;
+            padding: 16px 0;
+            width: 100%;
+            font-size: 28px;
+            color: #000;
+            font-size: 28px;
+            display: flex;
+            justify-content: space-between;
+
+            
+            @include phone375(){
+               flex-direction: column;
+               font-size: 24px;
+
+            }
+         
+
+            &:hover{
+                background:rgba(0, 39, 213, 0.3);
+                transition: all 0.6s;
+                
+            }
+            
+        }
+    }
+}
+.connect-listbox-mail{
+    display: flex;
+    gap: 16px;
+
+    @include phone375(){
+        flex-direction: column;
+    
+
+        }
+
+   
+}
+
+.connect-listbox{
+    display: flex;
+    gap: 8px;
+
+
+}
+
+.wang-mail{
+    text-decoration: underline;
+}
+
+
+
+
+
+

@@ -1,0 +1,171 @@
+.nav-list{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 24px 0;
+   
+
+
+
+        li{
+            margin: 0;
+            a{
+                font-weight:$fw-l;
+                font-size:$font-l;
+                color: #000;
+
+                &:hover{
+                    opacity: 0.5;
+                }
+
+                
+            }
+        }
+ 
+        
+    
+}
+
+.header{
+   display: flex;
+
+  
+   
+
+    @include phone767(){
+        flex-direction: column;
+    }
+
+}
+
+.bg{
+    width:50%;
+    @include bgimg(834px,50%,'../img/Hero Section.png');
+     
+    
+  
+       @include phone767(){
+            width: 100%;
+            @include bgimg(375px,50%,'../img/Hero Section.png');
+        }
+   
+
+}
+
+.bg2{
+    width:50%;
+    @include bgimg(834px,50%,'../img/Hero Section2.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include phone767(){
+            width: 100%;
+            @include bgimg(356px,50%,'../img/Hero Section2.png');
+            justify-content: flex-start;
+            position: relative;
+
+        }
+   
+
+}
+
+.header-text{
+    
+    color: $primary;
+    display: flex;
+    flex-direction: column;
+    margin-left:80px;
+    gap: 12px;
+    @include phone375(){
+        margin:24px;
+
+    }
+
+    h1{
+        font-size: 120px;
+        font-weight: 900;
+
+        @include phone767(){
+            font-size: 52px;
+        }
+        
+
+         @include phone375(){
+            font-size: clamp(32px, 10vw, 52px); // 自動依螢幕調整大小
+           
+        }
+    }
+    h2{
+        @include title28;
+            
+        
+    }
+
+}
+
+.header-list{
+    background: #FFFF;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding:80px 40px;
+    font-size:$font-l;
+    max-width: 1077px;
+    position: absolute;
+    top: 774px;
+    right: 80px;
+ 
+    @include phone767(){
+        top:220px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+
+    }
+  
+
+
+    @include phone375(){
+        padding: 40px 24px;
+        width: 351px;
+        top:196px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 24px;
+        
+            
+        }
+
+
+}
+
+.style{
+    display: flex;
+      @include phone767(){
+        flex-direction: column;
+            
+        }
+}
+
+.media-icon{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    li{
+        margin: 0;
+        a{
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+
+.footer{
+    padding: 24px 0;
+    text-align: center;
+}

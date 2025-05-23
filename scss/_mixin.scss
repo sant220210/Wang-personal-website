@@ -1,0 +1,63 @@
+/*命名css*/
+@mixin title64{
+  font-size:64px;
+  font-weight:$fw-l;
+}
+@mixin title48{
+  font-size:48px;
+  font-weight:$fw-l;
+}
+@mixin title28{
+  font-size:28px;
+  font-weight:$fw-l;
+}
+
+@mixin title24{
+  font-size:24px;
+  font-weight:$fw-l;
+}
+
+@mixin hide-text{
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  
+}
+
+@mixin bgimg($height,$bgpos,$url){
+  background-image: url($url);/*3*/
+  background-size:cover; 
+  height: $height;/*1*/
+  background-position:$bgpos;/*2*/
+}
+
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: $lines;/*主要有效的屬性*/
+  line-clamp: $lines;/*設定顯示 2 行/只是為了相容性*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
