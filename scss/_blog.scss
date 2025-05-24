@@ -1,0 +1,25 @@
+.key{
+    display: flex;
+    gap: 24px;
+}
+.key-bg{
+    width:948px;
+    @include bgimg(640px,70%,'../img/photo5.png');
+}
+.key-content{
+    width: 50%;
+    padding:207px 312px 207px 0 ;
+
+    h2{
+        @include title28;
+    }
+
+    p{
+        @include line-clamp(2);
+    }
+    
+}
+
+.search{
+    width: 416px;
+}

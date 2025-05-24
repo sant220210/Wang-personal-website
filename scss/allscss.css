@@ -283,7 +283,6 @@ li {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 64px;
 }
 @media (max-width: 768px) {
   li {
@@ -869,7 +868,6 @@ li img {
   }
 }
 .connect .connect-list li {
-  margin: 0;
   border-bottom: 1px solid #000;
   display: flex;
 }
@@ -911,4 +909,37 @@ li img {
 
 .wang-mail {
   text-decoration: underline;
+}
+
+.key {
+  display: flex;
+  gap: 24px;
+}
+
+.key-bg {
+  width: 948px;
+  background-image: url("../img/photo5.png"); /*3*/
+  background-size: cover;
+  height: 640px; /*1*/
+  background-position: 70%; /*2*/
+}
+
+.key-content {
+  width: 50%;
+  padding: 207px 312px 207px 0;
+}
+.key-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+.key-content p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /*主要有效的屬性*/
+  line-clamp: 2; /*設定顯示 2 行/只是為了相容性*/
+}
+
+.search {
+  width: 416px;
 }/*# sourceMappingURL=allscss.css.map */
