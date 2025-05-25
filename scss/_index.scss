@@ -41,17 +41,15 @@
                 margin: 32px 0;
                 
                 }
-            }
+            
 
 
     li{
         display: flex;
         align-items: center;
         position: relative;
-       
-        // margin-bottom: 64px;
-  
-
+        margin-bottom: 64px;
+        
         @include phone767(){
         
             flex-direction: column;
@@ -63,7 +61,9 @@
         img{
             object-fit: cover;
         }
+        }
     }
+
 
 
 
@@ -343,9 +343,8 @@
 
     }
 
-   
-
 }
+
 .arrow-nav{
     font-size: 44px;
     color:$primary;
@@ -353,7 +352,6 @@
     @include phone375(){
         display: none;
     }
-
 
     
     .bi-arrow-left-circle-fill{
@@ -666,6 +664,7 @@
 .info-name{
     margin-bottom: 16px;
 }
+
 .order-btn{
     background: #fff;
     border: 1px solid $primary;
@@ -682,12 +681,6 @@
     
     }
 }
-
-
-
-
-
-
 
 
 
@@ -718,13 +711,9 @@
 
     .connect-list{
 
-
         li{
-            // margin:0;
             border-bottom: 1px solid #000;
-            display: flex;
-            
-
+            display: flex;            
       
         }
 
@@ -755,13 +744,13 @@
         }
     }
 }
+
 .connect-listbox-mail{
     display: flex;
     gap: 16px;
 
     @include phone375(){
         flex-direction: column;
-    
 
         }
 
@@ -772,15 +761,8 @@
     display: flex;
     gap: 8px;
 
-
 }
 
 .wang-mail{
     text-decoration: underline;
 }
-
-
-
-
-
-

@@ -278,19 +278,19 @@ body {
     margin: 32px 0;
   }
 }
-
-li {
+.mainbox li {
   display: flex;
   align-items: center;
   position: relative;
+  margin-bottom: 64px;
 }
 @media (max-width: 768px) {
-  li {
+  .mainbox li {
     flex-direction: column;
     margin-bottom: 32px;
   }
 }
-li img {
+.mainbox li img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -940,6 +940,80 @@ li img {
   line-clamp: 2; /*設定顯示 2 行/只是為了相容性*/
 }
 
+.blog-main {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.list li {
+  width: 31.3333%;
+  margin: 40px 0;
+}
+.list li h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.list li img {
+  margin-bottom: 16px;
+}
+
+.hashtag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tag {
+  color: rgb(0, 39, 213);
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+.tag:hover {
+  opacity: 0.5;
+}
+
+.text {
+  color: rgb(75, 75, 75);
+  font-size: 14px;
+}
+
+.btn {
+  width: 100px;
+  margin-top: 16px;
+  border: 1px solid #000;
+  text-align: center;
+  border-radius: 40px;
+  padding: 8px 16px;
+  color: rgb(75, 75, 75);
+}
+.btn:hover {
+  background: rgb(0, 39, 213);
+  color: #fff;
+}
+
 .search {
   width: 416px;
+}
+
+.footer-box {
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-around;
+}
+.footer-box a {
+  color: #000;
+}
+
+.footer-box-list {
+  display: flex;
+}
+.footer-box-list a:hover {
+  opacity: 0.5;
 }/*# sourceMappingURL=allscss.css.map */
