@@ -4,8 +4,32 @@
     }
 }
 
+@mixin phone414{
+    @media (max-width:414px) {
+        @content;
+    }
+}
+
+@mixin phone569{
+    @media (max-width:569px) {
+        @content;
+    }
+}
+
 @mixin phone767{
     @media (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin tablet992{
+    @media (max-width:992px) {
+        @content;
+    }
+}
+
+@mixin tablet1366{
+    @media (max-width:1366px) {
         @content;
     }
 }

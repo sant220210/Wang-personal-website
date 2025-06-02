@@ -1,35 +1,21 @@
-.main{
-    margin-top: 180px;
-
-     @include phone767(){
-        margin-top: 240px;
-     
-    }
-
-
-    
-    @include phone375(){
-        padding: 64px 12px;
-    }
-
-
+.main{  
 
     .container{
         padding: 80px 0;
+
+        @include phone767(){
+        padding: 64px 12px;
+    }
 
         h2{
             @include title64;
 
                 @include phone767(){
                     text-align: center;
-
-                }
-                @include phone375(){
-
                     @include title48;
-                
 
                     }
+           
             }
         }
 }
@@ -37,7 +23,7 @@
 .mainbox{
     margin: 32px 110px;
 
-        @include phone375(){
+        @include phone767(){
                 margin: 32px 0;
                 
                 }
@@ -51,7 +37,7 @@
         margin-bottom: 64px;
         
         @include phone767(){
-        
+          
             flex-direction: column;
             margin-bottom: 32px;
            
@@ -60,6 +46,19 @@
 
         img{
             object-fit: cover;
+
+             @include tablet992(){
+                width:50%;
+
+        
+                }
+
+            @include phone767(){
+                width:100%;
+
+        
+                }
+
         }
         }
     }
@@ -76,10 +75,15 @@
     position: absolute;
     right:2px;
 
-    @include phone767(){
-        width: 100%;
+     @include tablet992(){
+        width: 50%;
         position: static;
+    
+     @include phone767(){
+                width:100%;
+
         
+                }    
         
     }
 
@@ -96,8 +100,21 @@
         background: $primary;
         top:44px;
 
-        @include phone375(){
+        @include phone767(){
+            top:72%;
+        }
+
+        @include phone569(){
+            top:65%;
+        }
+
+        @include phone414(){
             top:55%;
+        }
+     
+
+        @include phone375(){
+            top:60%;
         }
      
 
@@ -110,8 +127,9 @@
     }
 }
 
-.textbox-left{
+.textboxli-left{
    flex-direction: row-reverse;
+
 
    @include phone767(){
     flex-direction: column;
@@ -123,11 +141,12 @@
     left: 2px;
     
 
-    @include phone767(){
-        width: 100%;
+    @include tablet992(){
         position: static;
 
     }
+
+    
    }
 }
 
@@ -140,8 +159,13 @@
     margin-top: -32px;
     text-align: right;
 
+    @include tablet1366(){
+        padding:0 12px;
+    }
+
     @include phone767(){
-        margin-top: 0;
+        margin-top:0;
+      
     }
 
     a{
@@ -188,7 +212,7 @@
  
 
         
-        @include phone375(){
+        @include phone767(){
             padding: 64px 12px;
         }
 
@@ -218,9 +242,9 @@
         width:31.333%;
         align-items: flex-start;
         
-     
-       
-       
+       @include tablet992(){
+        width: 48%;
+       } 
 
         @include phone767(){
          width: 100%;
@@ -243,14 +267,19 @@
     img{
         margin-bottom: 16px;
         object-fit: cover;
+
+        @include phone767(){
+        width: 100%;
+        }
+
+
     }
 
 }
 
 .hashtag{
     display: flex;
-   
-    
+
 }
 
 .tag{
@@ -321,7 +350,7 @@
  
 
 
-    @include phone375(){
+    @include phone767(){
        display: block;
        display: flex;
        justify-content: end;
@@ -349,7 +378,7 @@
     font-size: 44px;
     color:$primary;
 
-    @include phone375(){
+    @include phone767(){
         display: none;
     }
 
@@ -375,18 +404,27 @@
     .container{
         padding: 80px 0;
 
-        @include phone375(){
+        @include phone767(){
             padding: 64px 12px;
         }
         
         h2{
             @include title64;
             margin-bottom: 24px;
+           
 
-            @include phone375(){
+            @include phone767(){
                 @include title48;
             }
         }
+    }
+}
+
+.case-h2{
+    display: flex;
+
+    @include phone414(){
+        flex-direction: column;
     }
 }
 
@@ -406,16 +444,46 @@
     background: rgba(237, 237, 237, 1);
     padding: 24px;
 
+    @include tablet1366(){
+        width: 100%;
+    }
+
     @include phone767(){
         width: 100%;
         }
 
+     @include phone375(){
+        padding:24px 24px 0 24px ;
+   
+    }
+
 
     img{
         object-fit: cover;
+
+        @include phone375(){
+            height: 578px;
+            object-fit: contain;
+        }
         
     
     }
+}
+
+.case-block-img{
+    @include bgimg(578px,50%,'../img/photo8.png');
+
+    @include phone375(){
+        @include bgimg(420px,0 10%,'../img/case2.png');
+    }
+
+
+    }
+
+.case-main-box{
+    display: flex;
+    flex-direction: column;
+   
 }
 
 .case-text-title{
@@ -428,17 +496,24 @@
     left: 550px;
     top: 15px;
 
-    @include phone767(){
-        position: static;
+    @include tablet1366(){
         width: 100%;
+        position: static;
         padding: 104px 24px 40px 24px;
+           
     }
+
+    @include phone767(){
+
+        width: 100%;
+    }
+
 
     span{
         color:$primary;
     }
     p{
-         &::before{
+        &::before{
         position: absolute; 
         content: ""; 
         width: 30px;
@@ -446,10 +521,18 @@
         background: $primary;
         top:98px;
 
+        @include tablet1366(){
+            top:270px;
+        }
         
-         @include phone767(){
-            top:360px;
-            }
+        @include phone767(){
+            top:63%;
+        }
+
+        @include phone375(){
+            top:52%;
+        }
+
 
         }
     }
@@ -465,14 +548,17 @@
     left: 765px;
     top: 250px;
 
-    @include phone767(){
+    @include tablet1366(){
         position: static;
         width: 100%;
         padding: 104px 24px 40px 24px;
+
     }
+ 
 
 
         p{
+
          &::before{
         position: absolute; 
         content: ""; 
@@ -482,8 +568,16 @@
         top:90px;
 
         @include phone767(){
-            top:620px;
-            }
+            top:82%;
+        }
+
+    
+  
+
+
+
+
+    
         }
     }
 }
@@ -518,7 +612,7 @@
     display: flex;
     gap: 24px; 
 
-    @include phone375(){
+    @include phone767(){
         flex-direction: column;
         }
     
@@ -621,7 +715,7 @@
     width: 800px;
     margin-bottom: 16px;
 
-    @include phone375(){
+    @include phone569(){
         padding:40px 24px;
         width: 100%;
         margin-bottom: 0;
@@ -695,7 +789,7 @@
     .container{
         padding: 80px 0;
 
-         @include phone375(){
+         @include phone767(){
             padding: 64px 12px;
          }
         h2{
@@ -727,10 +821,15 @@
             display: flex;
             justify-content: space-between;
 
+            @include phone767(){
+                font-size: 24px;
+
+            }
+
             
             @include phone375(){
                flex-direction: column;
-               font-size: 24px;
+               
 
             }
          
@@ -749,7 +848,7 @@
     display: flex;
     gap: 16px;
 
-    @include phone375(){
+    @include phone767(){
         flex-direction: column;
 
         }
@@ -765,4 +864,6 @@
 
 .wang-mail{
     text-decoration: underline;
+
+
 }
