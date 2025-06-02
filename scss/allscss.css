@@ -986,6 +986,7 @@ body {
   padding: 8px 16px;
   margin-top: 24px;
   font-weight: 700;
+  cursor: pointer;
 }
 .order-btn:hover {
   color: #fff;

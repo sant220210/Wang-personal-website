@@ -556,7 +556,6 @@
     }
  
 
-
         p{
 
          &::before{
@@ -570,12 +569,6 @@
         @include phone767(){
             top:82%;
         }
-
-    
-  
-
-
-
 
     
         }
@@ -599,7 +592,6 @@
 
     }
     
-
 }
 
 .case-list{
@@ -674,7 +666,6 @@
     color: $primary;
     display: block;
 }
-
 
 
 /*訂閱電子報*/
@@ -767,6 +758,7 @@
     padding: 8px 16px;
     margin-top: 24px;
     font-weight: 700;
+    cursor: pointer;
 
     &:hover{       
         color:#fff;
@@ -829,8 +821,6 @@
             
             @include phone375(){
                flex-direction: column;
-               
-
             }
          
 
@@ -852,7 +842,6 @@
         flex-direction: column;
 
         }
-
    
 }
 
@@ -864,6 +853,5 @@
 
 .wang-mail{
     text-decoration: underline;
-
 
 }

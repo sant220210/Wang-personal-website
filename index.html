@@ -23,6 +23,8 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="scss/allscss.css">
    
 
@@ -37,7 +39,7 @@
 
 <header class="header">
           
-    <div class="header-content">    
+    <div class="header-content"  >    
                     
         <div class="bg"></div>
 
@@ -51,9 +53,9 @@
 
     </div>   
 
-     <div class="header-list">
+     <div class="header-list" data-aos="fade-up-left">
    
-            <div class="style">
+            <div class="style" >
                 <p>嗨，我是Alyse</p><p>一名深耕前端技術的工程師。</p>
             </div>
         
@@ -79,7 +81,7 @@
 
         <ul class="mainbox">
             <li>
-                <img src="img/photo.png" alt="履歷健檢">
+                <img src="img/photo.png" alt="履歷健檢" data-aos="fade-right" data-aos-delay="400">
                 <div class="textbox">
                     
                         <h3>履歷健檢</h3>
@@ -89,7 +91,7 @@
             </li>
 
             <li class="textboxli-left">
-                <img src="img/photo2.png"  alt="線上諮詢">
+                <img src="img/photo2.png"  alt="線上諮詢" data-aos="fade-left" data-aos-delay="400">
                 <div class="textbox">
                     <h3>線上諮詢</h3>
                     <p>想快速解決前端學習瓶頸，或需要專業職涯指引？透過線上一對一諮詢，我將協助你更有方向地邁進。</p>
@@ -97,7 +99,7 @@
             </li>
 
             <li>
-                <img src="img/photo3.png" alt="網頁開發">
+                <img src="img/photo3.png" alt="網頁開發" data-aos="fade-right" data-aos-delay="400">
                 <div class="textbox">
                     <h3>網頁開發</h3>
                     <p>想打造高效能、具美感的網站？我提供從需求訪談到架構實作的一站式服務，讓你的品牌與產品在線上脫穎而出。</p>
@@ -105,7 +107,7 @@
             </li>
 
             <li class="textboxli-left">
-                <img src="img/photo4.png" alt="企業內訓">
+                <img src="img/photo4.png" alt="企業內訓" data-aos="fade-left" data-aos-delay="400">
                 <div class="textbox">
                     <h3>企業內訓</h3>
                     <p>想讓團隊快速掌握前端最新技術或優化現有專案流程？我可協助打造專業、實用的企業內訓課程，一次解決團隊痛點。</p>
@@ -123,11 +125,11 @@
         <a href="#" class="arrow-nav"><i class="bi bi-arrow-left-circle-fill"></i></a>
 
         <div class="container">
-            <h2>部落格精選</h2>
+            <h2 data-aos="fade-up">部落格精選</h2>
 
             <ul class="blog-list">
                 <li>
-                    <img src="img/photo5.png" alt="#面試準備 #工程師求職">
+                    <img src="img/photo5.png" alt="#面試準備 #工程師求職" >
 
                     <p class="date"><time datetime="2024-10-11">2024/10/21</time></p>
             
@@ -194,7 +196,7 @@
 
 <div class="case">
     <div class="container">
-        <div class="case-h2">
+        <div class="case-h2" data-aos="fade-up">
             <h2>職涯諮詢<h2>成功案例</h2>
         </div>
 
@@ -281,7 +283,7 @@
     <div class="order">
 
         <div class="order-text">
-        <h2>訂閱電子報</h2>
+        <h2 data-aos="fade-up">訂閱電子報</h2>
         <p>立即訂閱，搶先掌握<span>前端 x 職涯</span>的獨家資訊！</p>
 
          <form action="index.html">
@@ -301,7 +303,7 @@
 
 <div class="connect">
     <div class="container">
-    <h2>與我聯繫</h2>
+    <h2 data-aos="fade-up">與我聯繫</h2>
         <ul class="connect-list">
             <li>
                 <a href="mailto:sant220210@gmail.com" title="連到信箱">
@@ -331,9 +333,9 @@
 
 
 
-  <!-- 
-    script src="js/jquery-3.7.0.js"></script>
-    <script src="js/alljs.js"></script>
-    -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body> 
 </html>
